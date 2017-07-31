@@ -1,0 +1,2 @@
+date,open,high,close,low,volume,price_change,p_change,ma5,ma10,ma20,v_ma5,v_ma10,v_ma20,turnover
+2017-06-30,11.83,22.86,22.86,11.83,886.64,3.94,43.97,22.86,22.86,22.86,886.64,886.64,886.64,0.33

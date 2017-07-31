@@ -1,0 +1,17 @@
+top's Config File (Linux processes with windows)
+Id:h, Mode_altscr=0, Mode_irixps=1, Delay_time=3.0, Curwin=0
+Def	fieldscur=¥¦§¨©ª«¬­®¯°±²³´56789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghij
+	winflags=61244, sortindx=6, maxtasks=0
+	summcolor=1, msgscolor=1, headcolor=4, taskcolor=5
+Fixed_widest=0, Summary_unit_scale=0, Task_unit_scale=0, Zero_suppress=0
+
+Job	fieldscur=¥¦¹·º³´Ä»¼½§Å()*+,-./012568>?@ABCFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghij
+	winflags=193844, sortindx=16, maxtasks=0
+	summcolor=6, msgscolor=6, headcolor=7, taskcolor=6
+Mem	fieldscur=¥º»¼½¾¿ÀÁÃÄ³´·Å&'()*+,-./0125689BFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghij
+	winflags=193844, sortindx=37, maxtasks=0
+	summcolor=5, msgscolor=5, headcolor=4, taskcolor=5
+Usr	fieldscur=¥¦§¨ª°¹·ºÄÅ)+,-./1234568;<=>?@ABCFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghij
+	winflags=193844, sortindx=19, maxtasks=0
+	summcolor=3, msgscolor=3, headcolor=2, taskcolor=3
+Fixed_widest=0, Summary_unit_scale=0, Task_unit_scale=0, Zero_suppress=0

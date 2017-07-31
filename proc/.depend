@@ -1,0 +1,16 @@
+pwcache.o: proc/pwcache.c proc/alloc.h proc/procps.h proc/pwcache.h
+sig.o: proc/sig.c proc/sig.h proc/procps.h proc/c.h
+alloc.o: proc/alloc.c proc/alloc.h proc/procps.h
+escape.o: proc/escape.c proc/procps.h proc/escape.h proc/readproc.h \
+ proc/pwcache.h
+version.o: proc/version.c proc/version.h proc/procps.h
+slab.o: proc/slab.c proc/slab.h proc/procps.h proc/alloc.h
+ksym.o: proc/ksym.c proc/procps.h proc/alloc.h proc/version.h \
+ proc/sysinfo.h proc/wchan.h
+sysinfo.o: proc/sysinfo.c proc/alloc.h proc/procps.h proc/version.h \
+ proc/sysinfo.h
+whattime.o: proc/whattime.c proc/whattime.h proc/procps.h proc/sysinfo.h
+devname.o: proc/devname.c proc/version.h proc/procps.h proc/devname.h \
+ proc/readproc.h proc/pwcache.h proc/alloc.h
+readproc.o: proc/readproc.c proc/version.h proc/procps.h proc/readproc.h \
+ proc/pwcache.h proc/alloc.h proc/escape.h proc/devname.h

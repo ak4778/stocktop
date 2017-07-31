@@ -1,0 +1,79 @@
+#
+# http://www.runoob.com/python/python-object.html
+#
+# Flag utilisé pour build sous ia64
+ifeq ("${BUILD_IA64}", "TRUE")
+	RTS_FLAG=
+else
+	RTS_FLAG="--RTS=sjlj"
+endif
+
+APP_NAME=stocktop
+
+# Gestion des bibliotheques dynamiques ADACS (rpath)
+# --------------------------------------------------
+#STOCK_RPATH  := /usr/lib/
+STOCK_ROOT=${PWD}
+STOCK_RPATH  := $(STOCK_ROOT)/lib
+
+# Generation du code C/C++
+# ------------------------
+CXX=/usr/bin/g++
+CXXFLAGS=-Wall -g -g3 -ggdb ${GNATO} -pipe -fPIC -Wno-non-virtual-dtor
+#CXXFLAGS=-Wall -g ${GNATO} -pipe -fPIC -Wno-non-virtual-dtor
+
+CC=/usr/bin/gcc -g -std=gnu99
+CFLAGS=$(CXXFLAGS)
+
+# Generation du code Java
+# -----------------------
+JAVAC=javac
+JAR=jar
+
+# DFLAGS standards fonctions du mode simulation
+# ---------------------------------------------
+ifeq ("${ADACS_SIMULE}", "TRUE")
+	ifeq ("${CONFIG_TEST}", "TRUE")
+		DFLAGS=-DTIXML_USE_STL -DSIMULATION -DCONFIG_TEST
+	else
+		DFLAGS=-DTIXML_USE_STL -DSIMULATION 
+	endif
+else
+	ifeq ("${CONFIG_TEST}", "TRUE")
+	    ifeq ("${INSTALL_SITE}", "TRUE")
+		   DFLAGS=-DTIXML_USE_STL -DCONFIG_TEST -DINSTALL_SITE
+		else
+		   DFLAGS=-DTIXML_USE_STL -DCONFIG_TEST
+		endif
+	else
+	    ifeq ("${INSTALL_SITE}", "TRUE")
+		   DFLAGS=-DTIXML_USE_STL -DINSTALL_SITE
+		else
+		   DFLAGS=-DTIXML_USE_STL
+		endif
+	endif
+endif
+	
+
+# Generation du code Python
+# --------------------------
+INC_FLAGS_PYTHON=-I/usr/include/python2.4/
+
+LDFLAGS_PYTHON= -lpython2.4 \
+                -Xlinker \
+                -export-dynamic
+
+DATE         = `date +%Y-%m-%d@%H:%M:%S`
+
+DFLAGS       += -DBUILD_WITH_WHINE     	        #modify
+DFLAGS       += -DHAVE_STDIO_EXT_H     	        #modify
+DFLAGS       += -DPACKAGE_NAME=\"Stock\"    	#modify
+DFLAGS       += -DPACKAGE_VERSION=\"1.0.2\"     #modify
+DFLAGS       += -DBUILT_DATE=\"$(DATE)\"        #modify
+DFLAGS       += -DLOCALEDIR=\"$(PWD)\"		#modify
+DFLAGS       += -DDATADIR=\"$(PWD)\/data\"	#modify
+#DFLAGS       += -DLOG2STDOUT			#modify	
+DFLAGS       += -DUNICOE                        #modify 
+DFLAGS       += -DBUILD_4_STOCK                 #modify
+#DFLAGS       += -DCHINESE                       #modify
+
