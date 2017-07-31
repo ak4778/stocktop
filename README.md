@@ -13,7 +13,7 @@ Open a terminal to execute:
 Four tab is supported so far just like top.
 
 The following commmand is suppored:
-
+  ****************************************************************************
   Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
   
   l,t,m     Toggle Summary: 'l' load avg; 't' task/cpu stats; 'm' memory info
@@ -21,8 +21,7 @@ The following commmand is suppored:
   0,1,2,3,I Toggle: '0' zeros; '1/2/3' cpus or numa node views; 'I' Irix mode
   
   f,F,X     Fields: 'f'/'F' add/remove/order/sort; 'X' increase fixed-width
-  
-  
+  ****************************************************************************  
   L,&,<,> . Locate: 'L'/'&' find/again; Move sort column: '<'/'>' left/right
   
   R,H,V,J . Toggle: 'R' Sort; 'H' Threads; 'V' Forest view; 'J' Num justify
@@ -38,8 +37,7 @@ The following commmand is suppored:
   n,#,^O  . Set: 'n'/'#' max tasks displayed; Show: Ctrl+'O' other filter(s)
   
   C,...   . Toggle scroll coordinates msg for: up,down,left,right,home,end
-  
-
+  ****************************************************************************
   k,r       Manipulate tasks: 'k' kill; 'r' renice
   
   d or s    Set update interval
