@@ -10,7 +10,7 @@ Open a terminal to buid:
 Open a terminal to execute:
    ./stocktop 
 
-Four tab is supported so far just like top.
+Four tabs is supported so far just like top.
 
 The following commmand is suppored:
   ****************************************************************************
