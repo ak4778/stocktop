@@ -12,7 +12,7 @@ Open a terminal to execute:
 
 Four tabs is supported so far just like top.
 
-The following commmand is suppored:
+The following commmands is suppored:
   ****************************************************************************
   Z,B,E,e   Global: 'Z' colors; 'B' bold; 'E'/'e' summary/task memory scale
   
