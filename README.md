@@ -2,7 +2,7 @@ A stock viewer and selection tool evolved from top.
 
 Depends on the ncurses lib.
 
-The 'data' directory contains the transaction deal respectively.
+The 'data' directory contains only a part of the transaction deals.
 
 Open a terminal to buid:
    make 
