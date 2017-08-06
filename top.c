@@ -3977,7 +3977,7 @@ static void procs_statistic (proc_t *this)
    int sum = this->dzx_G_daily + this->macd_G_daily + this->kdj_G_daily + this->rsi_G_daily;
    this->sweight = 100*((float)sum/4);
    this->downshadow = 0;
-   this->downshadow = 100*((float)(this->current_price>this->open_today?this->open_today:this->current_price) - (float)this->min) / ((float)this->max - (float)this->min);
+   this->downshadow = 10000*((float)(this->current_price>this->open_today?this->open_today:this->current_price) - (float)this->min) / ((float)this->max - (float)this->min);
    if (this->volume > 0)
    {
       this->ddr = 100000*(this->ddbuy)/(this->volume);
@@ -7774,7 +7774,7 @@ static const char *stock_show (int index, int current, const WIN_t *w, const pro
             cp = float_scale_percent((float)p->sweight, FieldWidth, Justify_Num_Right);
             break;
          case S_DOWNSHADOW:
-            cp = float_scale_percent((float)p->downshadow, FieldWidth, Justify_Num_Right);
+            cp = float_scale_percent(((float)p->downshadow)/100, FieldWidth, Justify_Num_Right);
             break;
          case S_MA5:
             cp = float_scale_percent((float)p->ma5/FACTOR, FieldWidth, Justify_Num_Right);
